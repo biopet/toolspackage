@@ -14,7 +14,7 @@ developers := List(Developer(id="ffinfo", name="Peter van 't Hof", email="pjrvan
 
 scalaVersion := "2.11.11"
 
-libraryDependencies += "com.github.biopet" %% "test-utils" % "0.2" % Test
+libraryDependencies += "com.github.biopet" %% "tool-test-utils" % "0.2-SNAPSHOT" % Test changing()
 
 libraryDependencies += "com.github.biopet" %% "addgenesandtranscriptstogtf" % "0.1-SNAPSHOT" changing()
 libraryDependencies += "com.github.biopet" %% "annotatevcfwithbed" % "0.1-SNAPSHOT" changing()
