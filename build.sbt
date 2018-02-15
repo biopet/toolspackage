@@ -6,9 +6,9 @@ startYear := Some(2018)
 name := "ToolsPackage"
 biopetUrlName := "toolspackage"
 
-biopetIsTool := false
+biopetIsTool := true
 
-mainClass in assembly := Some("nl.biopet.tools.Package")
+mainClass in assembly := Some("nl.biopet.tools.Executable")
 
 developers := List(Developer(id="ffinfo", name="Peter van 't Hof", email="pjrvanthof@gmail.com", url=url("https://github.com/ffinfo")))
 

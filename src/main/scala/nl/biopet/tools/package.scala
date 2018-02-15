@@ -32,10 +32,12 @@ package object tools {
     arg[String]("toolName")
       .optional()
       .action((x, c) => c.copy(toolName = Some(x)))
+      .text("Name of the tool to execute")
     arg[String]("tool args")
       .optional()
       .unbounded()
       .action((x, c) => c.copy(toolArgs = c.toolArgs :+ x))
+      .text("Arguments for the tool")
   }
 
 }

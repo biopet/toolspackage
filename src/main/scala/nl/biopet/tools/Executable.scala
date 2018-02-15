@@ -65,6 +65,7 @@ import nl.biopet.tools.vepnormalizer.VepNormalizer
 import nl.biopet.tools.wipereads.WipeReads
 import nl.biopet.tools.xcnvtobed.XcnvToBed
 import nl.biopet.utils.tool.ToolCommand
+import nl.biopet.utils.Documentation.htmlTable
 
 object Executable extends ToolCommand[Args] {
   def main(args: Array[String]): Unit = {
@@ -168,16 +169,38 @@ object Executable extends ToolCommand[Args] {
 
   def descriptionText: String =
     """
-      |
+      |This package does combine all biopet tools into a single jar for easy access.
+      |All tools can still be used as separated jars if required, this is just to make it easier for you as user.
     """.stripMargin
 
   def manualText: String =
-    """
+    s"""
+      |
+      |${toolHtmlTable("Vcf tools", vcfTools)}
+      |
+      |${toolHtmlTable("Bam tools", bamTools)}
+      |
+      |${toolHtmlTable("Fastq tools", fastqTools)}
+      |
+      |${toolHtmlTable("Annotation tools", annotationTools)}
+      |
+      |${toolHtmlTable("Other tools", otherTools)}
       |
     """.stripMargin
 
+  def toolHtmlTable(title: String, tools: List[ToolCommand[_]]): String = {
+    htmlTable(List(title, "Documentation"), tools.map(t => List(t.toolName, s"https://biopet.github.iot/${t.urlToolName}")))
+  }
+
   def exampleText: String =
-    """
+    s"""
+      |Get a list of tools:
+      |${example()}
       |
+      |Normal tools:
+      |${example("<tool_name>", "<arguments to tool>")}
+      |
+      |Spark tools:
+      |${sparkExample("<tool_name>", "<arguments to tool>")}
     """.stripMargin
 }
