@@ -173,23 +173,29 @@ object Executable extends ToolCommand[Args] {
       |All tools can still be used as separated jars if required, this is just to make it easier for you as user.
     """.stripMargin
 
-  def manualText: String =
-    s"""
-      |
-      |${toolHtmlTable("Vcf tools", vcfTools)}
-      |
-      |${toolHtmlTable("Bam tools", bamTools)}
-      |
-      |${toolHtmlTable("Fastq tools", fastqTools)}
-      |
-      |${toolHtmlTable("Annotation tools", annotationTools)}
-      |
-      |${toolHtmlTable("Other tools", otherTools)}
-      |
-    """.stripMargin
+  def manualText: String = {
 
-  def toolHtmlTable(title: String, tools: List[ToolCommand[_]]): String = {
-    htmlTable(List(title, "Documentation"), tools.map(t => List(t.toolName, s"https://biopet.github.iot/${t.urlToolName}")))
+    val rows = toolHtmlColumns("Vcf tools", vcfTools) :::
+      toolHtmlColumns("Bam tools", bamTools) :::
+      toolHtmlColumns("Fatq tools", fastqTools) :::
+      toolHtmlColumns("Annotation tools", annotationTools) :::
+      toolHtmlColumns("Other tools", otherTools)
+
+    s"""
+       |
+       |${htmlTable(List("Tool name", "Documentation"), rows)}
+       |
+    """.stripMargin
+  }
+
+  def toolHtmlColumns(title: String,
+                      tools: List[ToolCommand[_]]): List[List[String]] = {
+    List(s"<b>$title</b>", "") :: tools.map(
+      t =>
+        List(
+          t.toolName,
+          s"""<a href="https://biopet.github.io/${t.urlToolName}">Release</a> / <a href="https://biopet.github.io/${t.urlToolName}/develop">Develop</a>"""
+      )) ::: List(List("", ""))
   }
 
   def exampleText: String =
