@@ -13,6 +13,10 @@ class ToolPackageTest extends ToolTest[Args] {
 
   @Test
   def testUnique(): Unit = {
-    assert(Executable.allTools.map(_.toolName).distinct.lengthCompare(Executable.allTools.length) == 0, "Duplicate tools detected")
+    assert(Executable.allTools
+             .map(_.toolName)
+             .distinct
+             .lengthCompare(Executable.allTools.length) == 0,
+           "Duplicate tools detected")
   }
 }
