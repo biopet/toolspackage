@@ -50,6 +50,7 @@ import nl.biopet.tools.rebuildcontigmap.RebuildContigMap
 import nl.biopet.tools.refflatsstats.RefflatStats
 import nl.biopet.tools.replacecontigsgtffile.ReplaceContigsGtfFile
 import nl.biopet.tools.replacecontigsvcffile.ReplaceContigsVcfFile
+import nl.biopet.tools.sampleconfig.SampleConfig
 import nl.biopet.tools.sampletsvtoconfig.SamplesTsvToConfig
 import nl.biopet.tools.seqstat.SeqStat
 import nl.biopet.tools.snptesttovcf.SnptestToVcf
@@ -153,6 +154,7 @@ object Executable extends ToolCommand[Args] {
   def otherTools: List[ToolCommand[_]] = List(
     XcnvToBed,
     SquishBed,
+    SampleConfig,
     SamplesTsvToConfig,
     RebuildContigMap,
     PipelineStatus,
