@@ -67,6 +67,9 @@ import nl.biopet.tools.wipereads.WipeReads
 import nl.biopet.tools.xcnvtobed.XcnvToBed
 import nl.biopet.utils.tool.ToolCommand
 import nl.biopet.utils.Documentation.htmlTable
+import nl.biopet.utils.io.resourceToFile
+
+import scala.io.Source
 
 object Executable extends ToolCommand[Args] {
   def main(args: Array[String]): Unit = {
@@ -104,7 +107,7 @@ object Executable extends ToolCommand[Args] {
   }
 
   def allTools: List[ToolCommand[_]] =
-    fastqTools ::: bamTools ::: vcfTools ::: otherTools
+    fastqTools ::: bamTools ::: vcfTools ::: annotationTools ::: otherTools
 
   def vcfTools: List[ToolCommand[_]] = List(
     VcfStats,
@@ -165,6 +168,21 @@ object Executable extends ToolCommand[Args] {
     BastyGenerateFasta
   )
 
+  val versions: Map[ToolCommand[_], Option[String]] = {
+    val source =
+      getClass.getResourceAsStream("/biopet_toolspackage_libraries.tsv")
+    val versionMap = Source
+      .fromInputStream(source)
+      .getLines()
+      .map { line =>
+        val values = line.split("\t")
+        require(values.size == 2)
+        values(0).toLowerCase -> values(1)
+      }
+      .toMap
+    allTools.map(x => x -> versionMap.get(x.toolName.toLowerCase)).toMap
+  }
+
   def argsParser = new ArgsParser(this)
 
   def emptyArgs: Args = Args()
@@ -185,19 +203,21 @@ object Executable extends ToolCommand[Args] {
 
     s"""
        |
-       |${htmlTable(List("Tool name", "Documentation"), rows)}
+       |${htmlTable(List("Tool name", "Version", "Documentation"), rows)}
        |
     """.stripMargin
   }
 
   def toolHtmlColumns(title: String,
                       tools: List[ToolCommand[_]]): List[List[String]] = {
-    List(s"<b>$title</b>", "") :: tools.map(
-      t =>
-        List(
-          t.toolName,
-          s"""<a href="https://biopet.github.io/${t.urlToolName}">Release</a> / <a href="https://biopet.github.io/${t.urlToolName}/develop">Develop</a>"""
-      )) ::: List(List("", ""))
+    List(s"<b>$title</b>", "", "") :: tools.map { t =>
+      val version = versions(t).getOrElse("Unknown")
+      List(
+        t.toolName,
+        version,
+        s"""<a href="https://biopet.github.io/${t.urlToolName}/$version">Release</a> / <a href="https://biopet.github.io/${t.urlToolName}/develop">Develop</a>"""
+      )
+    } ::: List(List("", "", ""))
   }
 
   def exampleText: String =

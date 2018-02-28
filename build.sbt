@@ -47,7 +47,7 @@ libraryDependencies += "com.github.biopet" %% "pipelinestatus" % "0.1"
 libraryDependencies += "com.github.biopet" %% "rebuildcontigmap" % "0.1"
 libraryDependencies += "com.github.biopet" %% "refflatstats" % "0.1"
 libraryDependencies += "com.github.biopet" %% "replacecontigsgtffile" % "0.1"
-libraryDependencies += "com.github.biopet" %% "replacecontigsvcffile" % "0.1"
+libraryDependencies += "com.github.biopet" %% "replacecontigsvcffile" % "0.2"
 libraryDependencies += "com.github.biopet" %% "sampleconfig" % "0.1"
 libraryDependencies += "com.github.biopet" %% "samplestsvtoconfig" % "0.1"
 libraryDependencies += "com.github.biopet" %% "snptesttovcf" % "0.1"
@@ -63,3 +63,10 @@ libraryDependencies += "com.github.biopet" %% "vcfwithvcf" % "0.1"
 libraryDependencies += "com.github.biopet" %% "vepnormalizer" % "0.1"
 libraryDependencies += "com.github.biopet" %% "wipereads" % "0.1"
 libraryDependencies += "com.github.biopet" %% "xcnvtobed" % "0.1"
+
+resourceGenerators in Compile += Def.task {
+  val file = resourceManaged.value / ("biopet_" + name.value.toLowerCase + "_libraries.tsv")
+  val contents = libraryDependencies.value.map(x => s"${x.name}\t${x.revision}")
+  IO.writeLines(file, contents)
+  Seq(file)
+}.taskValue
