@@ -72,6 +72,9 @@ import nl.biopet.utils.io.resourceToFile
 import scala.io.Source
 
 object Executable extends ToolCommand[Args] {
+
+  override def urlToolName: String = "toolspackage"
+
   def main(args: Array[String]): Unit = {
     val cmdArgs = cmdArrayToArgs(args)
 
