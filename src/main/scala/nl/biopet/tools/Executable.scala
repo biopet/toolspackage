@@ -67,7 +67,6 @@ import nl.biopet.tools.wipereads.WipeReads
 import nl.biopet.tools.xcnvtobed.XcnvToBed
 import nl.biopet.utils.tool.ToolCommand
 import nl.biopet.utils.Documentation.htmlTable
-import nl.biopet.utils.io.resourceToFile
 
 import scala.io.Source
 
