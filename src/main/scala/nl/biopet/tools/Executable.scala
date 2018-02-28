@@ -75,6 +75,8 @@ object Executable extends ToolCommand[Args] {
 
   override def urlToolName: String = "toolspackage"
 
+  override def toolName: String = "ToolsPackage"
+
   def main(args: Array[String]): Unit = {
     val cmdArgs = cmdArrayToArgs(args)
 
