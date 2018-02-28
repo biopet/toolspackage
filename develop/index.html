@@ -1,0 +1,491 @@
+<!--
+   Copyright (c) 2014 Biopet
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy of
+   this software and associated documentation files (the "Software"), to deal in
+   the Software without restriction, including without limitation the rights to
+   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+   the Software, and to permit persons to whom the Software is furnished to do so,
+   subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Executable</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/docs.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Executable</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text" id="Version">
+              Version</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </nav>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar" >
+
+        <ul class="nav nav-sidebar nav-list">
+          <li><b>Index</b></li>
+          
+          <li><a href="#description"><span>Description</span></a></li>
+          
+          <li><a href="#installation"><span>Installation</span></a></li>
+          
+          <li><a href="#manual"><span>Manual</span></a></li>
+          
+          <li><a href="#about"><span>About</span></a></li>
+          
+          <li><a href="#contributing"><span>Contributing</span></a></li>
+          
+          <li><a href="#contact"><span>Contact</span></a></li>
+          
+        </ul>
+        <ul class="nav nav-sidebar nav-list">
+          <li><b>Project Links</b></li>
+
+          <li><a href="https://github.com/biopet/executable">Source code</a></li>
+          <li><a href="https://github.com/biopet/executable/issues">Feedback, feature requests and bug reports</a></li>
+          <li><a href="api/index.html">API Documentation</a></li>
+        </ul>
+        <ul class="nav nav-sidebar nav-list">
+          <li><b>Documentation</b></li>
+          <li><a href="../index.html">Latest stable version</a></li>
+          <li><a href="../develop/index.html">Development version</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="top">
+
+        
+        <h1 id="description" class="section">Description</h1>
+        <p>This package does combine all biopet tools into a single jar for easy access.
+        All tools can still be used as separated jars if required, this is just to make it easier for you as user.</p>
+        
+        <h1 id="installation" class="section">Installation</h1>
+        <p>Executable requires Java 8 to be installed on your device. Download Java 8
+        <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html">here</a>
+        or install via your distribution&#39;s package manager.</p>
+        <p>Download the latest version of Executable <a href="https://github.com/biopet/executable/releases/">here</a>.
+        To generate the usage run:</p>
+        <pre><code>java -jar &lt;Executable_jar&gt; --help</code></pre>
+        
+        <h1 id="manual" class="section">Manual</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tool name</th>
+              <th>Version</th>
+              <th>Documentation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Vcf tools</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>VcfStats</td>
+              <td>1.1</td>
+              <td><a href="https://biopet.github.io/vcfstats">Release</a> / <a href="https://biopet.github.io/vcfstats/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>VcfFilter</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/vcffilter">Release</a> / <a href="https://biopet.github.io/vcffilter/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>VcfToTsv</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/vcftotsv">Release</a> / <a href="https://biopet.github.io/vcftotsv/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>VcfWithVcf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/vcfwithvcf">Release</a> / <a href="https://biopet.github.io/vcfwithvcf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>VepNormalizer</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/vepnormalizer">Release</a> / <a href="https://biopet.github.io/vepnormalizer/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ValidateVcf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/validatevcf">Release</a> / <a href="https://biopet.github.io/validatevcf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>SnptestToVcf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/snptesttovcf">Release</a> / <a href="https://biopet.github.io/snptesttovcf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>MergeSv</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/mergesv">Release</a> / <a href="https://biopet.github.io/mergesv/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>MpileupToVcf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/mpileuptovcf">Release</a> / <a href="https://biopet.github.io/mpileuptovcf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ReplaceContigsVcfFile</td>
+              <td>0.2</td>
+              <td><a href="https://biopet.github.io/replacecontigsvcffile">Release</a> / <a href="https://biopet.github.io/replacecontigsvcffile/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>GvcfToBed</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/gvcftobed">Release</a> / <a href="https://biopet.github.io/gvcftobed/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>FindOverlapMatch</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/findoverlapmatch">Release</a> / <a href="https://biopet.github.io/findoverlapmatch/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>DigenicSearch</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/digenicsearch">Release</a> / <a href="https://biopet.github.io/digenicsearch/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>CountAlleles</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/countalleles">Release</a> / <a href="https://biopet.github.io/countalleles/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>CorrectRefAlleles</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/correctrefalleles">Release</a> / <a href="https://biopet.github.io/correctrefalleles/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>AnnotateVcfWithBed</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/annotatevcfwithbed">Release</a> / <a href="https://biopet.github.io/annotatevcfwithbed/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>Bam tools</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>WipeReads</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/wipereads">Release</a> / <a href="https://biopet.github.io/wipereads/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>MultiCoverage</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/multicoverage">Release</a> / <a href="https://biopet.github.io/multicoverage/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ExtractAlignedFastq</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/extractalignedfastq">Release</a> / <a href="https://biopet.github.io/extractalignedfastq/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>DownsampleRegions</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/downsampleregions">Release</a> / <a href="https://biopet.github.io/downsampleregions/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>BamStats</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/bamstats">Release</a> / <a href="https://biopet.github.io/bamstats/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>Fatq tools</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ValidateFastq</td>
+              <td>0.1.1</td>
+              <td><a href="https://biopet.github.io/validatefastq">Release</a> / <a href="https://biopet.github.io/validatefastq/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>SeqStat</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/seqstat">Release</a> / <a href="https://biopet.github.io/seqstat/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>FastqSync</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/fastqsync">Release</a> / <a href="https://biopet.github.io/fastqsync/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>FastqSplitter</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/fastqsplitter">Release</a> / <a href="https://biopet.github.io/fastqsplitter/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ExtractAdaptersFastqc</td>
+              <td>0.2</td>
+              <td><a href="https://biopet.github.io/extractadaptersfastqc">Release</a> / <a href="https://biopet.github.io/extractadaptersfastqc/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>Annotation tools</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ValidateAnnotation</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/validateannotation">Release</a> / <a href="https://biopet.github.io/validateannotation/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>BaseCounter</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/basecounter">Release</a> / <a href="https://biopet.github.io/basecounter/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>GtftoRefflat</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/gtftorefflat">Release</a> / <a href="https://biopet.github.io/gtftorefflat/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ReplaceContigsGtfFile</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/replacecontigsgtffile">Release</a> / <a href="https://biopet.github.io/replacecontigsgtffile/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>RefflatStats</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/refflatstats">Release</a> / <a href="https://biopet.github.io/refflatstats/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>ExtractTagsFromGtf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/extracttagsfromgtf">Release</a> / <a href="https://biopet.github.io/extracttagsfromgtf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>AddGenesAndTranscriptsToGtf</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/addgenesandtranscriptstogtf">Release</a> / <a href="https://biopet.github.io/addgenesandtranscriptstogtf/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>Other tools</b></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>XcnvToBed</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/xcnvtobed">Release</a> / <a href="https://biopet.github.io/xcnvtobed/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>SquishBed</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/squishbed">Release</a> / <a href="https://biopet.github.io/squishbed/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>SampleConfig</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/sampleconfig">Release</a> / <a href="https://biopet.github.io/sampleconfig/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>SamplesTsvToConfig</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/samplestsvtoconfig">Release</a> / <a href="https://biopet.github.io/samplestsvtoconfig/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>RebuildContigMap</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/rebuildcontigmap">Release</a> / <a href="https://biopet.github.io/rebuildcontigmap/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>PipelineStatus</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/pipelinestatus">Release</a> / <a href="https://biopet.github.io/pipelinestatus/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>NcbiReportToContigMap</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/ncbireporttocontigmap">Release</a> / <a href="https://biopet.github.io/ncbireporttocontigmap/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>MergeOtuMaps</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/mergeotumaps">Release</a> / <a href="https://biopet.github.io/mergeotumaps/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>KrakenReportToJson</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/krakenreporttojson">Release</a> / <a href="https://biopet.github.io/krakenreporttojson/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>DownloadNcbiAssembly</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/downloadncbiassembly">Release</a> / <a href="https://biopet.github.io/downloadncbiassembly/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td>BastyGenerateFasta</td>
+              <td>0.1</td>
+              <td><a href="https://biopet.github.io/bastygeneratefasta">Release</a> / <a href="https://biopet.github.io/bastygeneratefasta/develop">Develop</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2 id="example" class="section">Example</h2>
+        <p>Get a list of tools:</p>
+        <pre><code>java -jar &lt;Executable_jar&gt; </code></pre>
+        <p>Normal tools:</p>
+        <pre><code>java -jar &lt;Executable_jar&gt; &lt;tool_name&gt; &lt;arguments to tool&gt;</code></pre>
+        <p>Spark tools:</p>
+        <pre><code>spark-submit &lt;spark arguments&gt; &lt;Executable_jar&gt; &lt;tool_name&gt; &lt;arguments to tool&gt;</code></pre>
+        
+        <h2 id="usage" class="section">Usage</h2>
+        <p>Usage for Executable:</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Required</th>
+              <th>Can occur multiple times</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>--log_level, -l</td>
+              <td>no</td>
+              <td>no</td>
+              <td>Level of log information printed. Possible levels: &#39;debug&#39;, &#39;info&#39;, &#39;warn&#39;, &#39;error&#39;</td>
+            </tr>
+            <tr>
+              <td>--help, -h</td>
+              <td>no</td>
+              <td>no</td>
+              <td>Print usage</td>
+            </tr>
+            <tr>
+              <td>--version, -v</td>
+              <td>no</td>
+              <td>no</td>
+              <td>Print version</td>
+            </tr>
+            <tr>
+              <td>toolName</td>
+              <td>no</td>
+              <td>no</td>
+              <td>Name of the tool to execute</td>
+            </tr>
+            <tr>
+              <td>tool args</td>
+              <td>no</td>
+              <td>yes (unlimited)</td>
+              <td>Arguments for the tool</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h1 id="about" class="section">About</h1>
+        <p>Executable is part of BIOPET tool suite that is developed at LUMC by <a href="http://sasc.lumc.nl/">the SASC team</a>.
+        Each tool in the BIOPET tool suite is meant to offer a standalone function that can be used to perform a
+        dedicate data analysis task or added as part of <a href="http://biopet-docs.readthedocs.io/en/latest/">BIOPET pipelines</a>.</p>
+        <p>All tools in the BIOPET tool suite are <a href="https://www.gnu.org/philosophy/free-sw.html">Free/Libre</a> and
+        <a href="https://opensource.org/osd">Open Source</a> Software.</p>
+        
+        <h1 id="contributing" class="section">Contributing</h1>
+        <p>The source code of Executable can be found <a href="https://github.com/biopet/executable">here</a>.
+        We welcome any contributions. Bug reports, feature requests and feedback can be submitted at our
+        <a href="https://github.com/biopet/executable/issues">issue tracker</a>.</p>
+        <p>Executable is build using sbt. Before submitting a pull request, make sure all tests can be passed by
+        running <code>sbt test</code> from the project&#39;s root. We recommend using an IDE to work on Executable. We have had
+        good results with <a href="https://www.jetbrains.com/idea/">this IDE</a>.</p>
+        
+        <h1 id="contact" class="section">Contact</h1>
+        <p>
+          <!-- Obscure e-mail address for spammers -->
+        For any question related to Executable, please use the
+        <a href='https://github.com/biopet/executable/issues'>github issue tracker</a>
+        or contact
+         <a href='http://sasc.lumc.nl/'>the SASC team</a> directly at: <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#115;&#99;&#64;&#108;&#117;&#109;&#99;&#46;&#110;&#108;'>
+        &#115;&#97;&#115;&#99;&#64;&#108;&#117;&#109;&#99;&#46;&#110;&#108;</a>.
+        </p>      
+
+      </div>
+    </div>
+
+  </div>
+  <script>
+    var loc = window.location.pathname;
+    var thisDir = loc.substring(0, loc.lastIndexOf('/'));
+    var splitLocation = window.location.pathname.split('/');
+    var version = splitLocation[splitLocation.length - 2]
+    document.getElementById("Version").innerHTML = "Version " + version;
+  </script>
+</body>
+
+</html>
