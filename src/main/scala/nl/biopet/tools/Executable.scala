@@ -89,6 +89,7 @@ object Executable extends ToolCommand[Args] {
 
   def printToolList(): Unit = {
     argsParser.usage.split("\n").foreach(logger.info)
+    logger.info("")
     printToolList("Vcf tools", vcfTools)
     printToolList("Bam tools", bamTools)
     printToolList("Fastq tools", fastqTools)
