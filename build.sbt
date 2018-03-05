@@ -17,7 +17,7 @@ developers += Developer(id = "ffinfo",
 
 scalaVersion := "2.11.12"
 
-libraryDependencies += "com.github.biopet" %% "tool-test-utils" % "0.2.1" % Test
+libraryDependencies += "com.github.biopet" %% "tool-test-utils" % "0.2.2" % Test
 
 libraryDependencies += "com.github.biopet" %% "addgenesandtranscriptstogtf" % "0.1"
 libraryDependencies += "com.github.biopet" %% "annotatevcfwithbed" % "0.1"
